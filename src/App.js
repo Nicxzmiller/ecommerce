@@ -10,6 +10,8 @@ import Cart from './components/Cart';
 import Default from './components/Default';
 import Contact from './components/Contact';
 import Signin from './components/Signin';
+import Services from './components/Services';
+import Invest from './components/Invest';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/cart" component={Cart}></Route>
         <Route path="/contact" component={Contact}></Route>
         <Route path="/signin" component={Signin}></Route>
+        <Route path="/services" component={Services}></Route>
+        <Route path="/invest" component={Invest}></Route>
         <Route component={Default}></Route>
       </Switch>
     </React.Fragment>
