@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import logo from '../logo.svg';
-import styled from 'styled-components';
+import styled from'styled-components';
+import {ButtonContainer, NavButton} from './Button';
 
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-sm bg-info navbar-dark px-sm-5">
+      <NavWrapper className="navbar navbar-expand-sm bg-info navbar-dark px-sm-5">
           {/*
               https://www.iconfinder.com/icons/1243689/call_phone_icon
               Creative Commons (Attribution 3.0 Unported);
@@ -18,32 +19,42 @@ export default class Navbar extends Component {
               <ul className="navbar-nav align-items-center">
                 <li className="nav-item ml-3">
                     <Link to="/" className="nav-link">
-                        Products
+                        <NavButton className="btn btn-info btn-sm">
+                            Products
+                        </NavButton>
                     </Link>
                 </li>
                   <li className="nav-item ml-3">
                       <Link to="/" className="nav-link">
-                          Services
+                          <NavButton className="btn btn-info btn-sm">
+                              Services
+                          </NavButton>
                       </Link>
                   </li>
                   <li className="nav-item ml-3">
                       <Link to="/" className="nav-link">
-                          Invest
+                          <NavButton className="btn btn-info btn-sm">
+                              Invest
+                          </NavButton>
                       </Link>
                   </li>
                   <li className="nav-item ml-3">
                       <Link to="/" className="nav-link">
-                          Contact Us
+                          <NavButton className="btn btn-info btn-sm">
+                              Contact
+                          </NavButton>
                       </Link>
                   </li>
                   <li className="nav-item ml-3">
                       <Link to="/" className="nav-link">
-                          Categories
+                          <NavButton className="btn btn-info btn-sm">
+                              Categories
+                          </NavButton>
                       </Link>
                   </li>
               </ul>
           <Link to='/cart' className="ml-auto">
-                <ButtonContainer className="btn btn-info">
+                <ButtonContainer className="btn btn-info btn-sm">
                     <span className="mr-2">
                          <i className="fas fa-cart-plus"></i>
                     </span>
@@ -51,20 +62,20 @@ export default class Navbar extends Component {
                 </ButtonContainer>
           </Link>
           <Link to='/'>
-              <button className="btn btn-info">
+              <ButtonContainer className="btn btn-info btn-sm">
                   <i className="far fa-user"></i> Sign In
-              </button>
+              </ButtonContainer>
           </Link>
-      </nav>
+      </NavWrapper>
     );
   }
 }
 
-const ButtonContainer = styled.button`
-text-transform: capitalize;
-font-size: ;
-margin: 0.5rem;
-background: transparent;
-border:0.05rem solid;
-border-radius:0.5rem;
+const NavWrapper = styled.nav`
+  .nav-link{
+    color: var (--mainWhite)!important;
+    font-size:1.3rem; //16px
+    text-transform:capitalize;
+  }  
 `;
+
