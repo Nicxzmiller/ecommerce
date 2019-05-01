@@ -61,7 +61,7 @@ export default class Navbar extends Component {
                     Cart
                 </ButtonContainer>
           </Link>
-          <Link to='/'>
+          <Link to='/signin' className="nav-item">
               <ButtonContainer className="btn btn-info btn-sm">
                   <i className="far fa-user"></i> Sign In
               </ButtonContainer>
